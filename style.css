@@ -1,0 +1,10 @@
+ img {
+    border: 1px solid rgb(224, 43, 26) !important ;
+     padding:0px  ; 
+     height: 80px;
+     font-weight: 50px !important;
+}
+.selfSec,.botSec{
+    
+    padding: 20px !important;
+}
