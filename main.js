@@ -319,11 +319,11 @@ else{
    
 }
 function refresh(){
-    count1 = count2 =0;
+    count1 = count2 = bitCount= 0;
     document.getElementById('Your_score').innerHTML=count1; 
     document.getElementById('Bot_score').innerHTML=count2; 
     
 }
-
+ 
 
 
