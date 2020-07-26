@@ -12,7 +12,7 @@ function ageIndays(){
       var year = parseInt(age/365);
       var month = parseInt((age%365)/30);
       var day = parseInt(((age%365)%30));
-      document.getElementById("myage").innerHTML =age+" days\n"+year+" Years"+month+" month"+day+"  days";
+      document.getElementById("myage").innerHTML = age+" days: \n"+year+" Years "+month+" month "+day+"  days ";
     //   var diff = date2-date1;
     //   console.log(diff);
     //   console.log("date1 ="+date1+"\ndate2= "+date2+"\n"+diff/(1000*3600*24)+"  days");
@@ -245,7 +245,9 @@ var randomNum = Math.floor(Math.random()*5)
 
 // Card_game_start
  var count1 = 0;
+var bitCount =0;
 function showImg(){
+bitCount++;
     var allImage = ['img1.png','img2.png','img3.jpeg','img4.png'];
     var imageGet = document.createElement('img');
      var GetId = document.getElementById('selfSec');
@@ -281,7 +283,7 @@ var count2 = 0;
 // var GetId =  document.getElementById('botSec')
 function showImg2(){
     var allImage = ['img1.png','img2.png','img3.jpeg','img4.png'];
-for(let i= 0;i<4; i++){
+for(let i= 0;i<bitCount; i++){
             var imageGet = document.createElement('img');
 
      var GetId1 =  document.getElementById('botSec');
