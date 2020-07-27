@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Game</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+ <div style="border: 2px solid green;" class="p-3 my-4">
+<div class="text-center">   
+    
+    <button id="toDay" onclick="fun()" class="btn btn-success btn-lg"></button>
+    <button id="toMonth" onclick="fun()"  class="btn btn-danger btn-lg"></button>
+    <button id="toYear" onclick="fun()"  class="btn btn-success btn-lg"></button>
+    <button id="Hour" onclick="fun()"  class="btn btn-outline-danger btn-sm"></button>
+    <button id="Min" onclick="fun()"  class="btn btn-outline-success btn-sm"></button>
+    <button id="sec" onclick="fun()"  class="btn btn-outline-warning btn-sm"></button>
+</div>
+
+    <br>
+ <section id="ageCalculator" class="bg-dark my-4 p-3">
+
+        <div class="text-center "> <h2 class=" text-light" style="border-radius: 20px ; background-color: #993399;"> Age Calculator</h2></div>
+
+    <div class="w-75">
+        <form action="" class="">
+         <div class="input-group my-1">
+             <div class="input-group-prepend">
+                <label class="input-group-text" for="from">From</label>
+                </div>
+            <input class="form-control form-control-sm" type="date" id="setDate1" name="from" value="Your birht date ">
+        </div> 
+        <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="to">To</label>
+        </div>
+    <input class="form-control form-control-sm" type="date" id="setDate2" value=""name="to" placeholder="">
+</div>
+    <h3 class="text-danger bg-dark my-2 p-3" id="myage">Your Age </h3>
+</form>
+    <button class="btn btn-warning my-2" onclick="ageIndays()">Click Me</button>
+    <button class="btn btn-danger float-right my-2" onclick="reset()">Reset</button>
+</div>
+</section>
+    <!-- Age Calculator end -->
+
+<!-- caT Generate start -->
+
+<div class="my-4 p-2 text-center" style="border: 3px solid rgb(137, 39, 230);">
+     <h2>Generator Cat</h2>
+     <button  class="btn btn-success btn-outline-danger p-2 m-2"  onclick="gCat()">Generate Cat</button>
+     <div class="img-contain" id="imgCatch"  class="my-4 p-3" style="border: 3px solid rgb(210, 231, 17);">
+      
+
+     </div>
+</div>
+    <!-- cat Generator Ended -->
+
+    <!-- rock ! paper siser strat -->
+
+   <div class="text-center my-4" style="border: 3px solid rgb(137, 39, 230); background-color: #46dfd7;">
+    <h2 class="text-uppercase  text-light p-2 m-1" style="border-radius: 20px ; background-color: #8e3ff7;">rock paper scissors</h2>
+
+ <div  id="imgSec" style="height: 300px;">
+    <img id="rock" class="" src="img/th.jpg" width="150" height="150" alt="" onclick="rpsGame(this)">
+    
+    <img id="paper" src="img/paper.jpg" width="150" height="150" alt="" onclick="rpsGame(this)" >
+
+    <img  id="scissor"src="img/scessors.jpg" width="150" height="150" alt="" onclick="rpsGame(this)">
+</div>
+    <!-- show_Result_Here (start) -->
+    <div class="text-center my-2">
+        <h2 id="result" class="text-danger"></h2>
+        <div id="resultSec1">
+
+        </div>
+         <h1 id="vs"></h1>
+         <div id="resultSec2">
+
+        </div>
+    </div>
+
+   </div>
+    <!-- rock ! paper siser end -->
+
+<!-- 
+
+    <h1 onclick="this.innerHTML='oppos!Why touch Me?'">Click ON the text </h1>
+    <h1 onclick="touch(this)">Click ON the text </h1> -->
+
+
+    </div>
+
+    <div class="container mb-5">
+
+        <form action="">
+            <select class="form-control form-control-sm" name="" id="" onchange="changeButton(this)">
+                <option value="random">Random</option>
+                <option value="red"> Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="reset">Reset</option>
+            </select>
+        </form>
+    </div>
+
+
+    <!-- Card_GAme_Start -->
+
+    <div class="container  text-center"          style="border: 2px solid rgba(46, 224, 40, 0.205);">
+        <h3>BlackJaklets Ply </h3>
+        <h3 id="cardResult"class="text-danger"></h3>
+        <div class="row">
+            <div class="col-6 bg-dark selfSec text-light" id="yourResult">
+                <h3>Your Section </h3>
+                <h3 class="text-danger" id="Your_score"></h3>
+                <div id="selfSec"></div>
+            </div>
+            <div class="col-6 bg-success botSec text-light" id="botResult">
+                <h4>BOT Section</h4>
+                <h3 class="text-warning" id="Bot_score" ></h3>
+                <div id="botSec"></div>
+            </div>
+
+        </div>
+
+  <button class="btn btn-danger m-1" onclick="showImg()">Bit</button>
+  <button onclick="showImg2()" class="btn btn-warning">Stand</button>
+  <button class="btn btn-success" onclick="refresh()">Reset</button>
+
+  <br>
+  
+  <br>
+  <small class="text-danger"> &cross; Ignor the card which are the symble </small>
+  <br>
+
+    </div>
+   <section  id="footerSec" class="bg-dark text-light text-center py-5">
+       <div>
+         <h4> Developed by &copy; <a href="https://web.facebook.com/Tm.galib?_rdc=1&_rdr">Musanna Galib</a> </h4>
+       </div>
+   </section>
+</div>
+    <script src="main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+</body>
+</html>
